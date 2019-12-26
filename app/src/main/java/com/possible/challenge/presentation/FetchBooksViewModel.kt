@@ -2,13 +2,14 @@ package com.possible.challenge.presentation
 
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
 import com.possible.challenge.core.domain.model.Book
 import com.possible.challenge.infrastructure.PossibleBooksService
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
 
-class FetchBooksViewModel(private val booksService : PossibleBooksService) {
+class FetchBooksViewModel(private val booksService : PossibleBooksService): ViewModel() {
 
     private val subscriptions = CompositeDisposable()
     private val mutableBookList = MutableLiveData<List<Book>>()
