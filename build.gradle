@@ -5,10 +5,10 @@ buildscript {
     repositories {
         google()
         jcenter()
-        
+
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.5.1'
+        classpath 'com.android.tools.build:gradle:3.5.3'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -19,10 +19,27 @@ allprojects {
     repositories {
         google()
         jcenter()
-        
+
     }
 }
 
 task clean(type: Delete) {
     delete rootProject.buildDir
+}
+
+ext {
+    compileSdkVersion = 28
+    minSdkVersion = 21
+    targetSdkVersion = 28
+
+    gsonVersion = "2.7"
+    okHttpVersion = "4.2.2"
+    rxJavaVersion = "2.1.14"
+    retrofitVersion = "2.2.0"
+    rxKotlinVersion = "2.2.0"
+    rxAndroidVersion = "2.0.2"
+    rxRetrofitAdapterVersion = "2.2.0"
+    gsonRetrofitConverterVersion = "2.1.0"
+
+    apiPath = '\"http://de-coding-test.s3.amazonaws.com/\"'
 }

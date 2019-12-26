@@ -1,2 +1,2 @@
-include ':app'
+include ':app', ':rest'
 rootProject.name='possible_challenge'
